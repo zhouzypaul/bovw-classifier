@@ -21,6 +21,15 @@ def main(train_data='data/train', test_data='data/test', num_clusters=50):
     accuracy = accuracy_score(testing_classes, predictions)
     print("accuracy: {}".format(accuracy))
 
+    print("save classifier")
+    classifier.save('results/classifier.pkl')
+
+    print("loading classifier and testing again")
+    duplicate_classifier = BOVWClassifier.load('results/classifier.pkl')
+    predictions = duplicate_classifier.predict(testing_images)
+    accuracy = accuracy_score(testing_classes, predictions)
+    print("loaded classifier accuracy: {}".format(accuracy))
+
 
 if __name__ == "__main__":
     main()

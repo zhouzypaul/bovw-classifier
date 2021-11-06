@@ -1,3 +1,5 @@
+import pickle
+
 import cv2
 import numpy as np
 from sklearn import cluster, svm
@@ -53,13 +55,16 @@ class BOVWClassifier:
         """
         save the classifier to disk
         """
-        # TODO
+        with open(save_path, 'wb') as f:
+            pickle.dump(self, f)
     
-    def load(self, load_path):
+    @classmethod
+    def load(cls, load_path):
         """
         init a classifier by loading it from disk
         """
-        # TODO
+        with open(load_path, 'rb') as f:
+            return pickle.load(f)
     
     def get_sift_features(self, images):
         """
