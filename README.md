@@ -38,5 +38,11 @@ classifier.train(training_images, training_labels)
 # testing the classifier
 predictions = classifier.predict(testing_images)
 accuracy = sklearn.metrics.accuracy_score(testing_labels, predictions)
+
+# saving the trained classifier
+classifier.save('results/classifier.pkl')
+
+# loading a pre-trained classifier
+trained_classifier = BOVWClassifier.load('results/super_classifier.pkl')
 ```
 more documentation can be found at `bovw/classifier.py`
