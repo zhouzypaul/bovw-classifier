@@ -9,7 +9,7 @@ is a good explanation of how Bag of Visual Words works. Essentially, there are 3
 3. train an SVM classifier based on the histogram features
 
 ## Setting up
-```bas
+```bash
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt  # mainly needing opencv-contrib-python, scikit-learn
