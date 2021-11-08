@@ -23,6 +23,14 @@ dataset and testing it at the end
 python3 -m bovw.train
 ```
 
+another script is availabe for training a BOVM classifier on frames collected from
+the game Montezuma's Revenge (from OpenAI Gym). This is a binary classification
+problem, where the classifier tries to classify whether a frame from the game is
+the starting frame of the game or not. This is useful for Reinforcement Researchers
+who want to build a classifier for initiation/termination sets for Options.
+```bash
+python3 -m bovw.monte
+```
 
 ## How to Use
 Here's how you can use the BOVW classifier in your own code
