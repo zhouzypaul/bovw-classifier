@@ -29,6 +29,8 @@ problem, where the classifier tries to classify whether a frame from the game is
 the starting frame of the game or not. This is useful for Reinforcement Researchers
 who want to build a classifier for initiation/termination sets for Options.
 ```bash
+# you need extra dependencies than in requirements.txt to run this
+# !pip install pfrl matplotlib atari_py
 python3 -m bovw.monte
 ```
 
