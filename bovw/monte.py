@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
     # train the classifier
     classifier = BOVWClassifier(num_clusters=50)
-    classifier.train(training_images, training_classes)
+    classifier.fit(training_images, training_classes)
 
     # test the classifier
     predictions = classifier.predict(testing_images)

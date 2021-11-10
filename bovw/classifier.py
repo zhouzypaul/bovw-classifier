@@ -17,7 +17,7 @@ class BOVWClassifier:
         self.kmeans_cluster = None
         self.svm_classifier = None
 
-    def train(self, X=None, Y=None):
+    def fit(self, X=None, Y=None):
         """
         train the classifier in 3 steps
         1. train the kmeans classifier based on the SIFT features of images

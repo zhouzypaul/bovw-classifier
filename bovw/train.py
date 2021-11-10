@@ -14,7 +14,7 @@ def main(train_data='data/train', test_data='data/test', num_clusters=50):
 
     print("train classifier")
     classifier = BOVWClassifier(num_clusters)
-    classifier.train(training_images, training_classes)
+    classifier.fit(training_images, training_classes)
 
     print("test classifier")
     predictions = classifier.predict(testing_images)

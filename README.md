@@ -43,7 +43,7 @@ from bovw import BOVWClassifier
 classifier = BOVWClassifier(num_clusters)  # use num_clusters cluster for the kmeans
 
 # training the classifier
-classifier.train(training_images, training_labels)
+classifier.fit(training_images, training_labels)
 
 # testing the classifier
 predictions = classifier.predict(testing_images)
