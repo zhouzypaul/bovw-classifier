@@ -79,7 +79,7 @@ class BOVWClassifier:
             # Convert them to grayscale
             image =cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             # SIFT extraction
-            sift = cv2.xfeatures2d.SIFT_create()
+            sift = cv2.SIFT_create()
             kp, descriptors = sift.detectAndCompute(image, None)
             #append the descriptors to a list of descriptors
             sift_features.append(descriptors)  # each descriptor of shape (n_descriptors, 128)
