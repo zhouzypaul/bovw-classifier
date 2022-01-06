@@ -85,7 +85,7 @@ def visualize_sift_features(images, save_dir='results/monte_sift'):
         # turn to gray scale
         gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # SIFT extraction
-        sift = cv2.xfeatures2d.SIFT_create()
+        sift = cv2.SIFT_create()
         keypoints, descriptors = sift.detectAndCompute(image, None)
 
         # draw the detected key points
