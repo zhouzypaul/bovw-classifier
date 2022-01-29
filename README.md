@@ -12,13 +12,31 @@ is a good explanation of how Bag of Visual Words works. Essentially, there are 3
 ```bash
 python3 -m venv env
 source env/bin/activate
-pip install -r requirements.txt  # mainly needing opencv-contrib-python, scikit-learn
+pip install -r requirements.txt  # mainly needing opencv-python, scikit-learn
 ```
 
 
 ## Try it out
 here's a short training script for training a BOVM classifier on a small image
 dataset and testing it at the end
+
+First, be sure to populate the `./data/` directory with the images you want to use.
+```
+./data
+├── test
+│   ├── aeroplane
+│   │   ├── test_1.jpg
+│   ├── bicycle
+│   └── car
+└── train
+    ├── aeroplane
+    │   ├── train_1.jpg
+    |   └── train_2.jpg
+    ├── bicycle
+    └── car
+```
+
+then, run the following script
 ```bash
 python3 -m bovw.train
 ```
